@@ -6,6 +6,17 @@
 *A Deep Learning–based Model using EfficientNetB2*
 
 ---
+##  **Abstract**
+
+Clutter detection is an emerging requirement in smart home automation, assistive robotics, and environment-aware AI systems. High levels of indoor clutter can obstruct robot navigation, reduce task efficiency, and increase safety risks for elderly or dependent individuals. This project proposes a deep learning–driven framework for automated clutter-level classification using indoor scene images. The system categorizes images into low, medium, and high clutter levels, enabling intelligent devices to assess environmental complexity and respond accordingly.
+
+The model is trained using the MIT Indoor Scenes Dataset, where 67 scene categories are manually mapped to clutter labels. A complete preprocessing pipeline was developed, including dataset standardization, corrupted image removal, stratified train–validation–test splitting, and on-the-fly data augmentation. Pretrained EfficientNetB2, known for its compound scaling properties and superior efficiency, is adopted as the backbone. Using transfer learning, the model initially trains with frozen ImageNet weights to stabilize convergence. This is followed by fine-tuning of the deeper convolutional layers, allowing the network to adapt high-level visual features to clutter-specific spatial distributions and object densities.
+
+The training protocol incorporates class weights to mitigate label imbalance and Adam optimization for stable gradient updates. Performance is evaluated using accuracy, classification reports, F1-scores, and confusion matrices on a held-out test set. Experimental results demonstrate that the fine-tuned EfficientNetB2 model reliably distinguishes varying clutter levels despite high intra-class variability. This indicates strong applicability in real-world scenarios such as autonomous cleaning robots, smart home monitoring, eldercare assistance, and indoor safety assessment.
+
+Overall, the project establishes an effective and computationally efficient pipeline for clutter recognition, showcasing the potential of modern deep learning architectures in enabling context-aware smart environments.
+
+---
 
 ##  **Project Overview**
 
